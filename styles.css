@@ -1,0 +1,476 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/homer-simpson-revised');
+                             
+
+                
+
+
+*{
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+header {
+    height: 90px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #000000;
+}
+
+nav {
+    width: 80%;
+    background-color: #000000;
+
+}
+
+ul {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    font-family: 'Homer Simpson Revised', sans-serif;
+}
+ul li {
+    position: relative;
+    list-style: none;
+
+}
+
+ul li a {
+    font-size: 20px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #fff
+    
+
+}
+
+ul li a::before {
+    content: attr(data-text);
+    position: absolute;
+    color: var(--clr);
+    width: 0;
+    overflow: hidden;
+    transition: 1s;
+    border-right: 4px solid var(--clr);
+    -webkit-text-stroke: 1px var(--clr);
+}
+
+ul li a:hover::before {
+    width: 100%;
+    filter: drop-shadow(0 0 25px var(--clr));
+
+}
+
+#logo {
+    width: 80px;
+    height: auto;
+}
+
+#banner {
+    background-image: url(https://images4.alphacoders.com/938/938326.jpg);
+    background-position: 50% 50%;
+    background-size: cover;
+    width: 100%;
+    height: 1000px;
+    background-color: #000000;
+
+}
+#trailer-container {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    background-color: #000000;
+    
+}
+
+.content {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000000;
+}
+
+.trailer {
+    width: 60%;
+    background-color: #000000;
+}
+
+#sinopse {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 30px;
+    background-color: #000000;
+}
+
+.description {
+    color: #fff;
+    font-size: 19px;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    width: 130%;
+    background-color: #000000;
+
+}
+
+.button {
+    width: 200px;
+    height: 60px;
+    background-color: red;
+    color: #fff;
+    padding: 8px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 8s;
+    font-size: 18px;
+    display: flex;
+    justify-content:center;
+    font-weight:bold;
+    border: none;
+    outline: none;
+    margin-top: 25px;
+    align-items: center;
+    
+}
+
+.button:hover {
+    background-color: #fff;
+    color: black;
+    
+}
+
+.actor-cards-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+
+    
+}
+
+.cards-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    grid-template-columns: repeat(5, 1fr);
+    row-gap: 80px;
+    column-gap: 6px;
+    background-color: #000000;
+    
+}
+
+.card {
+    width: 90%;
+    height: 700px;
+    background-size: cover;
+    background-position: 50% 50%;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 1s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 0 20px 10px;
+    color: #000000;
+    font-size: 17px;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    
+    
+}
+
+.card:hover{
+    transform: scale(1.02);
+    
+
+}
+.banner-1{
+    background-image: url(https://wallpaper.dog/large/20562785.jpg);
+}
+.banner-2{
+    background-image: url(https://wallpapers.com/images/hd/marge-simpson-cartoon-character-qcl0bb55ufp3zilv.jpg);
+}
+.banner-3{
+    background-image: url(https://4kwallpapers.com/images/wallpapers/bart-simpson-the-1290x2796-9429.png);
+}
+.banner-4{
+    background-image: url(https://www.kolpaper.com/wp-content/uploads/2020/05/Lisa-Simpson-Iphone-Wallpaper.jpg);
+}
+.banner-5{
+    background-image: url(https://images3.alphacoders.com/256/256985.jpg);
+}
+
+footer {
+    height:  300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #000000;
+    
+
+}
+
+span {
+    color: #bfbfbf;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+
+}
+
+.footer-navigation {
+    display: none;
+}
+
+.footer-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .footer-navigation {
+        display: block;
+    }
+
+    nav {
+        display: none;
+    }
+
+    #banner {
+        background-position: 40%;
+    }
+
+    #trailer-container {
+        width: 100%;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .content {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .trailer {
+        width: 100%;
+    }
+
+    #sinopse {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .description {
+        width: 100%;
+    }
+
+    .button {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .cards-content {
+        grid-template-columns: 1fr;
+        margin-top: 150px;
+    }
+}
+
+.content-container {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image:url(https://wallpapercave.com/wp/zPrTa0q.jpg);
+}
+.form-container {
+    width: 100%;
+    height: 950px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+form {
+    color: #bfbfbf;
+    background-color: rgba(0,0,0,0.2);
+    padding: 30px;
+    border-radius: 35px;
+    width: 25%;
+    
+}
+
+fieldset {
+    border: 3px solid dodgerblue;
+}
+ legend{
+    border: 1px solid dodgerblue;
+    padding: 10px;
+    text-align: center;
+    background-color: dodgerblue;
+    border-radius: 8px;
+    
+ }
+ .inputBox{
+    position: relative;
+ }
+
+ .inputUser {
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    color: #bfbfbf;
+    font-size: 15px;
+    width: 100%;
+    letter-spacing: 2px;
+ }
+
+ .labelInput {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    transition: .5px;
+
+ }
+ .inputUser:focus ~ .labelInput,
+ .inputUser:valid ~ .labelInput{
+    top: -20px;
+    font-size: 12px;
+    color: dodgerblue;
+ }
+
+ #data_nascimento{
+    border: none;
+    padding: 8px;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+    width: auto;
+ }
+ 
+textarea{
+    display: block;
+    width: 100%;
+    max-height: 100%;
+    min-width: 100%;
+    height: 100px;
+    min-height: 100px;
+    max-height: 100px;
+    background-color: rgba(0,0,0,0);
+
+}
+
+#submit {
+    background-image: linear-gradient(to right, rgb(0,92,197), rgb(90,20,220));
+    width: 100%;
+    border: none;
+    padding: 15px;
+    color: #bfbfbf;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    
+ }
+ #submit:hover {
+    background-image: linear-gradient(to right, rgb(0,80,172), rgb(80,19,195));
+ }
+
+ .actor-cards-container1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+
+    
+}
+
+.cards-content1 {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    row-gap: 80px;
+    column-gap: 6px;
+    background-color: #000000;
+    
+}
+
+.card {
+    width: 90%;
+    height: 700px;
+    background-size: cover;
+    background-position: 50% 50%;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 1s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 0 20px 10px;
+    color: #000000;
+    font-size: 17px;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    
+    
+}
+
+.card:hover{
+    transform: scale(1.02);
+}
+
+.banner-1{
+    background-image: url(https://wallpaper.dog/large/20562785.jpg);
+}
+.banner-2{
+    background-image: url(https://wallpapers.com/images/hd/marge-simpson-cartoon-character-qcl0bb55ufp3zilv.jpg);
+}
+.banner-3{
+    background-image: url(https://4kwallpapers.com/images/wallpapers/bart-simpson-the-1290x2796-9429.png);
+}
+.banner-4{
+    background-image: url(https://www.kolpaper.com/wp-content/uploads/2020/05/Lisa-Simpson-Iphone-Wallpaper.jpg);
+}
+.banner-5{
+    background-image: url(https://images3.alphacoders.com/256/256985.jpg);
+}
+.banner-6{
+    background-image: url(https://wallpaperaccess.com/full/3297474.jpg);
+}
+.banner-7{
+    background-image: url(https://i.pinimg.com/736x/7f/70/b7/7f70b721d00ad5f13f8c3bf3e3650276--los-simpsons-my-mom.jpg);
+}
+.banner-8{
+    background-image: url(https://relevantmagazine.com/wp-content/uploads/2022/01/NewYear.jpg);
+}
+.banner-9{
+    background-image: url(https://obizu.files.wordpress.com/2009/01/krustyheyhey.jpg?w=584);
+}
+.banner-10{
+    background-image: url(https://assets.mycast.io/characters/moe-szyslak-7172913-normal.jpg?1655650878);
+}
+
+.back1 {
+    background-color: transparent;
+}
+.back2{
+    background-color: transparent;
+    
+}
+.back3{
+     font-size: 20px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: black
+}
